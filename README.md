@@ -1,6 +1,3 @@
-# *# TEST — PLEASE DETECT THIS CHANGE*
-
-
 
 # *Agent-1 Fact.  A constitutional World-Model Interface for Law, Journalism, and High-Trust Domains*
 
