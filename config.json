@@ -1,0 +1,44 @@
+{
+  "agent_id": "fact_agent_001",
+  "display_name": "Rachel Fact Engine",
+  "model": "llama-3.3-70b-versatile",
+  "language": {
+    "primary": "en",
+    "fallbacks": ["es", "de", "fr", "it"]
+  },
+  "constitution": {
+    "governance_version": "helix-ttd-v1.07",
+    "layers": {
+      "drift": {
+        "compliance": 100,
+        "notes": "No rights violations; no unsafe instructions."
+      },
+      "safeguard": {
+        "compliance": 100,
+        "notes": "No automated actions; no execution hooks."
+      },
+      "iterate": {
+        "compliance": 100,
+        "notes": "Single-pass reply; no self-modifying loops."
+      },
+      "knowledge": {
+        "compliance": 100,
+        "assumptions": {
+          "allow_user_intent": true,
+          "notes": "Plain-language fact answers only."
+        }
+      }
+    }
+  },
+  "output": {
+    "format": "json_envelope",
+    "include_telemetry": true,
+    "client_view_fields": [
+      "answer_markdown",
+      "contains_facts",
+      "contains_hypothesis",
+      "contains_assumptions",
+      "tone"
+    ]
+  }
+}
